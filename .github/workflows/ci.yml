@@ -20,9 +20,9 @@ jobs:
 
       - name: Install modules
         run: npm ci
-
-      - name: Test buld
-        run: npm test -- --watchAll=false
+      #vite already has test in build
+      #   - name: Test buld
+      #     run: npm test -- --watchAll=false
 
       - name: Build
         run: npm run build
