@@ -1,0 +1,28 @@
+name: playbook_frontend
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  react-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: npm
+
+      - name: Install modules
+        run: npm ci
+
+      - name: Test buld
+        run: npm test -- --watchAll=false
+
+      - name: Build
+        run: npm run build
