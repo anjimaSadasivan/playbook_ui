@@ -39,10 +39,7 @@ export const AppLogin = () => {
 
   return (
     <>
-      <DefaultButton
-        name="Login with Github"
-        onClick={handleClick}
-      ></DefaultButton>
+      <DefaultButton onClick={handleClick}>Login</DefaultButton>
     </>
   )
 }
