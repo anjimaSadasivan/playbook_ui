@@ -1,19 +1,13 @@
+import { Button as MTButton } from '@material-tailwind/react'
+import { ComponentProps } from 'react'
 
-import { Button as MTButton } from "@material-tailwind/react";
-
-interface DefaultButtonProps{
-    name: string;
-    onClick?: () => void
-
+type DefaultButtonProps = ComponentProps<typeof MTButton> & {
+  name: string
 }
-export const DefaultButton = ({name, onClick}:DefaultButtonProps ) => {
-    console.log("clicked on button")
-    return(
-        <>
-        <MTButton onClick={onClick}>
-        {name}
-        </MTButton>
-        </>
-    )
+export const DefaultButton = ({ name, onClick }: DefaultButtonProps) => {
+  return (
+    <>
+      <MTButton onClick={onClick}>{name}</MTButton>
+    </>
+  )
 }
-

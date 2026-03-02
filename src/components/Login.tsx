@@ -9,7 +9,7 @@ export const AppLogin = () => {
 
   useEffect(() => {
     const code = searchParams.get('code')
-    const state = searchParams.get('state')
+    // const state = searchParams.get('state')
     if (code) {
       gitAuth(code)
     }
